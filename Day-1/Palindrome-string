@@ -1,1 +1,123 @@
-#to check whether the string is palindrome or not 
+# ============================================================
+# Program 1 : Check Whether a String is a Palindrome or Not
+# Day 1 - 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given string is a palindrome.
+
+A palindrome is a string that reads the same forward
+and backward.
+
+Examples:
+---------
+Input : madam
+Output: Palindrome
+
+Input : racecar
+Output: Palindrome
+
+Input : python
+Output: Not a Palindrome
+"""
+
+# ============================================================
+# Method 1 : Using String Slicing (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string = input("Enter a string: ")
+
+reverse_string = string[::-1]
+
+if string == reverse_string:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+flag = True
+
+for i in range(len(string) // 2):
+    if string[i] != string[-i - 1]:
+        flag = False
+        break
+
+if flag:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+"""
+
+
+"""
+Method 3 : Using reversed()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+if string == "".join(reversed(string)):
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+"""
+
+
+"""
+Method 4 : Using Two Pointers (Best Interview Approach)
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+left = 0
+right = len(string) - 1
+
+flag = True
+
+while left < right:
+    if string[left] != string[right]:
+        flag = False
+        break
+
+    left += 1
+    right -= 1
+
+if flag:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ String slicing ([::-1])
+✔ String indexing
+✔ Negative indexing
+✔ Using loops for comparison
+✔ reversed() function
+✔ Two Pointer technique
+✔ Time and Space Complexity
+
+"""
