@@ -1,0 +1,114 @@
+# ============================================================
+# Program 5 : Count the Frequency of Each Element in a List
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to count the frequency of each
+element in a given list.
+
+Examples:
+---------
+Input : [2, 2, 3, 1, 4, 4, 5, 7, 2, 2]
+
+Output:
+{
+    2: 4,
+    3: 1,
+    1: 1,
+    4: 2,
+    5: 1,
+    7: 1
+}
+"""
+
+# ============================================================
+# Method 1 : Using Dictionary and get() (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+numbers = [2, 2, 3, 1, 4, 4, 5, 7, 2, 2]
+
+frequency = {}
+
+for num in numbers:
+    frequency[num] = frequency.get(num, 0) + 1
+
+print("Frequency of Elements:")
+print(frequency)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Dictionary (Without get())
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+numbers = [2, 2, 3, 1, 4, 4, 5, 7, 2, 2]
+
+frequency = {}
+
+for num in numbers:
+    if num in frequency:
+        frequency[num] += 1
+    else:
+        frequency[num] = 1
+
+print(frequency)
+"""
+
+
+"""
+Method 3 : Using count()
+
+Time Complexity : O(n²)
+Space Complexity: O(n)
+
+numbers = [2, 2, 3, 1, 4, 4, 5, 7, 2, 2]
+
+frequency = {}
+
+for num in numbers:
+    frequency[num] = numbers.count(num)
+
+print(frequency)
+"""
+
+
+"""
+Method 4 : Using collections.Counter()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+from collections import Counter
+
+numbers = [2, 2, 3, 1, 4, 4, 5, 7, 2, 2]
+
+frequency = Counter(numbers)
+
+print(frequency)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary
+✔ get() method
+✔ count() method
+✔ collections.Counter()
+✔ Dictionary operations
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 5/100
+"""
