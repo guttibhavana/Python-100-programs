@@ -1,0 +1,97 @@
+# ============================================================
+# Program 4 : Reverse a String
+# Day 2 - 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to reverse a given string.
+
+Examples:
+---------
+Input : bhavana
+Output: anavahb
+
+Input : python
+Output: nohtyp
+"""
+
+# ============================================================
+# Method 1 : Using String Slicing (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string = input("Enter a string: ")
+
+print("Reversed String =", string[::-1])
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+reverse = ""
+
+for ch in string:
+    reverse = ch + reverse
+
+print("Reversed String =", reverse)
+"""
+
+
+"""
+Method 3 : Using reversed()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+reverse = "".join(reversed(string))
+
+print("Reversed String =", reverse)
+"""
+
+
+"""
+Method 4 : Using While Loop
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+i = len(string) - 1
+reverse = ""
+
+while i >= 0:
+    reverse += string[i]
+    i -= 1
+
+print("Reversed String =", reverse)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ String slicing
+✔ String traversal using for loop
+✔ reversed() function
+✔ while loop
+✔ String concatenation
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 4/100
+"""
