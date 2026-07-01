@@ -1,0 +1,67 @@
+# ============================================================
+# Program 7 : Sort a List Using Bubble Sort
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to sort a list using the
+Bubble Sort algorithm.
+
+Examples:
+---------
+Input : [10, 7, 9, 2, 4, 6]
+
+Output:
+[2, 4, 6, 7, 9, 10]
+"""
+
+# ============================================================
+# Method 1 : Bubble Sort (Used)
+# Time Complexity :
+# Best Case    : O(n)    (with optimization)
+# Average Case : O(n²)
+# Worst Case   : O(n²)
+# Space Complexity : O(1)
+# ============================================================
+
+numbers = [10, 7, 9, 2, 4, 6]
+
+n = len(numbers)
+
+for i in range(n):
+
+    swapped = False
+
+    for j in range(0, n - i - 1):
+
+        if numbers[j] > numbers[j + 1]:
+            numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+            swapped = True
+
+    if not swapped:
+        break
+
+print("Sorted List =", numbers)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Bubble Sort
+✔ Nested loops
+✔ Swapping
+
+Challenge Progress:
+Completed: 7/100
+"""
