@@ -1,0 +1,75 @@
+# ============================================================
+# Program 11 : Find the Sum of Digits of a Number
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the sum of the digits
+of a given number.
+
+Examples:
+---------
+Input : 122345
+Output: 17
+
+Explanation:
+1 + 2 + 2 + 3 + 4 + 5 = 17
+
+Input : 987
+Output: 24
+"""
+
+# ============================================================
+# Method 1 : Using While Loop (Used)
+# Time Complexity : O(d)
+# Space Complexity: O(1)
+# where d is the number of digits.
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+sum_of_digits = 0
+
+while number > 0:
+    sum_of_digits += number % 10
+    number //= 10
+
+print("Sum of Digits =", sum_of_digits)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using String Conversion
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+sum_of_digits = 0
+
+for digit in number:
+    sum_of_digits += int(digit)
+
+print("Sum of Digits =", sum_of_digits)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ while loop
+✔ Modulus operator (%)
+✔ Floor division (//)
+✔ String conversion
+✔ sum() function
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 11/100
+"""
