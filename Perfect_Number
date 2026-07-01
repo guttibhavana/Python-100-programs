@@ -1,0 +1,121 @@
+# ============================================================
+# Program 13 : Check Whether a Number is a Perfect Number
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given
+number is a Perfect Number.
+
+A Perfect Number is a positive integer that is equal
+to the sum of its proper divisors (excluding itself).
+
+Examples:
+---------
+Input : 6
+Output: Perfect Number
+
+Explanation:
+Factors of 6 (excluding 6) = 1, 2, 3
+1 + 2 + 3 = 6
+
+Input : 28
+Output: Perfect Number
+
+Input : 15
+Output: Not a Perfect Number
+"""
+
+# ============================================================
+# Method 1 : Using For Loop (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+sum_of_factors = 0
+
+for i in range(1, number):
+    if number % i == 0:
+        sum_of_factors += i
+
+if sum_of_factors == number:
+    print("Perfect Number")
+else:
+    print("Not a Perfect Number")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using While Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+number = int(input("Enter a number: "))
+
+i = 1
+sum_of_factors = 0
+
+while i < number:
+    if number % i == 0:
+        sum_of_factors += i
+    i += 1
+
+if sum_of_factors == number:
+    print("Perfect Number")
+else:
+    print("Not a Perfect Number")
+"""
+
+
+"""
+Method 3 : Optimized Using Square Root
+
+Time Complexity : O(√n)
+Space Complexity: O(1)
+
+import math
+
+number = int(input("Enter a number: "))
+
+sum_of_factors = 1
+
+if number == 1:
+    sum_of_factors = 0
+
+for i in range(2, int(math.sqrt(number)) + 1):
+    if number % i == 0:
+        sum_of_factors += i
+
+        if i != number // i:
+            sum_of_factors += number // i
+
+if sum_of_factors == number:
+    print("Perfect Number")
+else:
+    print("Not a Perfect Number")
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Perfect Number concept
+✔ Proper divisors
+✔ for loop
+✔ while loop
+✔ sum() function
+✔ Square root optimization
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 13/100
+"""
