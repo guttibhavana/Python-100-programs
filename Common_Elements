@@ -1,0 +1,82 @@
+# ============================================================
+# Program 8 : Find Common Elements Between Two Lists
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the common elements
+between two lists.
+
+Examples:
+---------
+Input:
+List1 = [1,2,5,7,3,6]
+List2 = [10,1,2,8,9]
+
+Output:
+[1,2]
+"""
+
+# ============================================================
+# Method 1 : Using 'in' Operator (Used)
+# Time Complexity : O(n × m)
+# Space Complexity: O(n)
+# ============================================================
+
+list1 = [1, 2, 5, 7, 3, 6]
+list2 = [10, 1, 2, 8, 9]
+
+common = []
+
+for item in list1:
+    if item in list2:
+        common.append(item)
+
+print("Common Elements =", common)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Set Intersection
+
+Time Complexity : O(n)
+
+list1 = [1,2,5,7,3,6]
+list2 = [10,1,2,8,9]
+
+common = list(set(list1) & set(list2))
+
+print(common)
+"""
+
+
+"""
+Method 3 : Using List Comprehension
+
+Time Complexity : O(n × m)
+
+list1 = [1,2,5,7,3,6]
+list2 = [10,1,2,8,9]
+
+common = [i for i in list1 if i in list2]
+
+print(common)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Membership operator (in)
+✔ List traversal
+✔ Sets
+✔ List comprehension
+
+Challenge Progress:
+Completed: 8/100
+"""
