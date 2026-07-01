@@ -1,0 +1,122 @@
+# ============================================================
+# Program 12 : Check Whether a Number is an Armstrong Number
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given
+number is an Armstrong number.
+
+An Armstrong number is a number that is equal to the
+sum of its own digits, each raised to the power of
+the total number of digits.
+
+Examples:
+---------
+Input : 153
+Output: Armstrong Number
+
+Explanation:
+1³ + 5³ + 3³ = 153
+
+Input : 9474
+Output: Armstrong Number
+
+Explanation:
+9⁴ + 4⁴ + 7⁴ + 4⁴ = 9474
+
+Input : 123
+Output: Not an Armstrong Number
+"""
+
+# ============================================================
+# Method 1 : Using While Loop (Used)
+# Time Complexity : O(d)
+# Space Complexity: O(1)
+# where d is the number of digits.
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+temp = number
+digits = len(str(number))
+armstrong_sum = 0
+
+while temp > 0:
+    digit = temp % 10
+    armstrong_sum += digit ** digits
+    temp //= 10
+
+if armstrong_sum == number:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using String Traversal
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+digits = len(number)
+armstrong_sum = 0
+
+for digit in number:
+    armstrong_sum += int(digit) ** digits
+
+if armstrong_sum == int(number):
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+"""
+
+
+"""
+Method 3 : Using Recursion
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+def armstrong_sum(n, power):
+    if n == 0:
+        return 0
+
+    return (n % 10) ** power + armstrong_sum(n // 10, power)
+
+
+number = int(input("Enter a number: "))
+
+digits = len(str(number))
+
+if armstrong_sum(number, digits) == number:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ while loop
+✔ Modulus operator (%)
+✔ Floor division (//)
+✔ Exponent operator (**)
+✔ len() function
+✔ String conversion
+✔ Recursion
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 12/100
+"""
