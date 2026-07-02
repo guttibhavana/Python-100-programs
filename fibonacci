@@ -1,0 +1,98 @@
+# ============================================================
+# Program 15 : Generate Fibonacci Series
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to generate the Fibonacci
+series up to n terms.
+
+In the Fibonacci sequence, each number is the sum
+of the previous two numbers.
+
+Sequence:
+0, 1, 1, 2, 3, 5, 8, 13, ...
+
+Examples:
+---------
+Input : 8
+
+Output:
+0 1 1 2 3 5 8 13
+"""
+
+# ============================================================
+# Method 1 : Using Iteration (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+n = int(input("Enter the number of terms: "))
+
+first = 0
+second = 1
+
+for i in range(n):
+    print(first, end=" ")
+    first, second = second, first + second
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using While Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+n = int(input("Enter the number of terms: "))
+
+first = 0
+second = 1
+count = 0
+
+while count < n:
+    print(first, end=" ")
+    first, second = second, first + second
+    count += 1
+"""
+
+
+"""
+Method 3 : Using Recursion
+
+Time Complexity : O(2^n)
+Space Complexity: O(n)
+
+def fibonacci(n):
+
+    if n <= 1:
+        return n
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+n = int(input("Enter the number of terms: "))
+
+for i in range(n):
+    print(fibonacci(i), end=" ")
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Fibonacci sequence
+✔ Multiple assignment
+✔ for loop
+✔ while loop
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 15/100
+"""
