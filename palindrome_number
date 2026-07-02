@@ -1,0 +1,127 @@
+# ============================================================
+# Program 14 : Check Whether a Number is a Palindrome
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given
+number is a palindrome.
+
+A palindrome number is a number that remains the same
+when its digits are reversed.
+
+Examples:
+---------
+Input : 12321
+Output: Palindrome Number
+
+Input : 1221
+Output: Palindrome Number
+
+Input : 12345
+Output: Not a Palindrome Number
+"""
+
+# ============================================================
+# Method 1 : Using Two Pointers (Used)
+# Time Complexity : O(d)
+# Space Complexity: O(d)
+# where d is the number of digits.
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+digits = [int(digit) for digit in str(number)]
+
+left = 0
+right = len(digits) - 1
+
+while left < right:
+
+    if digits[left] != digits[right]:
+        print("Not a Palindrome Number")
+        break
+
+    left += 1
+    right -= 1
+
+else:
+    print("Palindrome Number")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Reverse Number
+
+Time Complexity : O(d)
+Space Complexity: O(1)
+
+number = int(input("Enter a number: "))
+
+temp = number
+reverse = 0
+
+while temp > 0:
+    digit = temp % 10
+    reverse = reverse * 10 + digit
+    temp //= 10
+
+if reverse == number:
+    print("Palindrome Number")
+else:
+    print("Not a Palindrome Number")
+"""
+
+
+"""
+Method 3 : Using String Slicing
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+if number == number[::-1]:
+    print("Palindrome Number")
+else:
+    print("Not a Palindrome Number")
+"""
+
+
+"""
+Method 4 : Using reversed()
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+if number == "".join(reversed(number)):
+    print("Palindrome Number")
+else:
+    print("Not a Palindrome Number")
+"""
+
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Two Pointer technique
+✔ String conversion
+✔ List comprehension
+✔ while loop
+✔ Number reversal
+✔ String slicing
+✔ reversed() function
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 14/100
+"""
