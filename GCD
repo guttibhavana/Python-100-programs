@@ -1,0 +1,99 @@
+# ============================================================
+# Program 16 : Find the Greatest Common Divisor (GCD) of Two Numbers
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the Greatest Common
+Divisor (GCD) or Highest Common Factor (HCF) of two
+numbers.
+
+The GCD is the largest positive integer that divides
+both numbers without leaving a remainder.
+
+Examples:
+---------
+Input :
+13 5
+
+Output:
+1
+
+Input :
+24 36
+
+Output:
+12
+"""
+
+# ============================================================
+# Method 1 : Using Euclid's Algorithm (Used)
+# Time Complexity : O(log(min(a, b)))
+# Space Complexity: O(1)
+# ============================================================
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+while b > 0:
+    remainder = a % b
+    a = b
+    b = remainder
+
+print("GCD =", a)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(min(a, b))
+Space Complexity: O(1)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+gcd = 1
+
+for i in range(1, min(a, b) + 1):
+    if a % i == 0 and b % i == 0:
+        gcd = i
+
+print("GCD =", gcd)
+"""
+
+"""
+Method 4 : Using math.gcd()
+
+Time Complexity : O(log(min(a, b)))
+Space Complexity: O(1)
+
+import math
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("GCD =", math.gcd(a, b))
+"""
+
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Euclid's Algorithm
+✔ Modulus operator (%)
+✔ while loop
+✔ math.gcd()
+✔ Greatest Common Divisor (GCD)
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 16/100
+"""
