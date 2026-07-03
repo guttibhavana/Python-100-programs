@@ -1,0 +1,122 @@
+# ============================================================
+# Program 17 : Find the Least Common Multiple (LCM) of Two Numbers
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the Least Common
+Multiple (LCM) of two numbers.
+
+The LCM is the smallest positive integer that is
+exactly divisible by both numbers.
+
+Examples:
+---------
+Input :
+12 15
+
+Output:
+60
+
+Input :
+8 20
+
+Output:
+40
+"""
+
+# ============================================================
+# Method 1 : Using GCD (Euclid's Algorithm) (Used)
+# Time Complexity : O(log(min(a, b)))
+# Space Complexity: O(1)
+# ============================================================
+
+def find_gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def find_lcm(a, b):
+    if a == 0 or b == 0:
+        return 0
+
+    return abs(a * b) // find_gcd(a, b)
+
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("LCM =", find_lcm(num1, num2))
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a While Loop
+
+Time Complexity : O(LCM)
+Space Complexity: O(1)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+maximum = max(a, b)
+
+while True:
+    if maximum % a == 0 and maximum % b == 0:
+        print("LCM =", maximum)
+        break
+    maximum += 1
+"""
+
+
+"""
+Method 3 : Using a For Loop
+
+Time Complexity : O(a × b)
+Space Complexity: O(1)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+for i in range(max(a, b), a * b + 1):
+    if i % a == 0 and i % b == 0:
+        print("LCM =", i)
+        break
+"""
+
+
+"""
+Method 4 : Using math.lcm()
+
+Time Complexity : O(log(min(a, b)))
+Space Complexity: O(1)
+
+import math
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("LCM =", math.lcm(a, b))
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Least Common Multiple (LCM)
+✔ Greatest Common Divisor (GCD)
+✔ Euclid's Algorithm
+✔ while loop
+✔ Functions
+✔ math.lcm()
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 17/100
+"""
