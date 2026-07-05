@@ -1,0 +1,89 @@
+# ============================================================
+# Program 18 : Count the Number of Digits in a Number
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to count the total number
+of digits in a given number.
+
+Examples:
+---------
+Input : 12345
+Output: 5
+
+Input : 987654321
+Output: 9
+
+Input : 0
+Output: 1
+"""
+
+# ============================================================
+# Method 1 : Using While Loop (Used)
+# Time Complexity : O(d)
+# Space Complexity: O(1)
+# where d is the number of digits.
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+count = 0
+
+if number == 0:
+    count = 1
+else:
+    while number > 0:
+        count += 1
+        number //= 10
+
+print("Number of Digits =", count)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using String Conversion
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+print("Number of Digits =", len(number))
+"""
+
+"""
+Method 3 : Using a For Loop
+
+Time Complexity : O(d)
+Space Complexity: O(1)
+
+number = int(input("Enter a number: "))
+
+count = 0
+
+for digit in str(number):
+    count += 1
+
+print("Number of Digits =", count)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ while loop
+✔ Floor division (//)
+✔ len() function
+✔ String conversion
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 18/100
+"""
