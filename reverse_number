@@ -1,0 +1,97 @@
+# ============================================================
+# Program 23 : Reverse a Number
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to reverse a given number.
+
+Examples:
+---------
+Input : 89
+Output: 98
+
+Input : 12345
+Output: 54321
+"""
+
+# ============================================================
+# Method 1 : Using Arithmetic Operations (Used)
+# Time Complexity : O(d)
+# Space Complexity: O(1)
+# where d is the number of digits.
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+reverse = 0
+
+while number > 0:
+    digit = number % 10
+    reverse = reverse * 10 + digit
+    number //= 10
+
+print("Reversed Number =", reverse)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using String Slicing
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+print("Reversed Number =", number[::-1])
+"""
+
+
+"""
+Method 3 : Using reversed()
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+print("Reversed Number =", "".join(reversed(number)))
+"""
+
+
+"""
+Method 4 : Using a For Loop
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+number = input("Enter a number: ")
+
+reverse = ""
+
+for digit in number:
+    reverse = digit + reverse
+
+print("Reversed Number =", reverse)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ while loop
+✔ Modulus operator (%)
+✔ Floor division (//)
+✔ String slicing
+✔ reversed() function
+✔ Number reversal logic
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 23/100
+"""
