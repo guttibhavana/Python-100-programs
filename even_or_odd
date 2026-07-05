@@ -1,0 +1,66 @@
+# ============================================================
+# Program 21 : Check Whether a Number is Even or Odd
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given
+number is even or odd.
+
+An even number is divisible by 2.
+An odd number is not divisible by 2.
+
+Examples:
+---------
+Input : 20
+Output: Even
+
+Input : 15
+Output: Odd
+"""
+
+# ============================================================
+# Method 1 : Using Modulus Operator (Used)
+# Time Complexity : O(1)
+# Space Complexity: O(1)
+# ============================================================
+
+number = int(input("Enter a number: "))
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Bitwise AND Operator
+
+Time Complexity : O(1)
+Space Complexity: O(1)
+
+number = int(input("Enter a number: "))
+
+if number & 1:
+    print("Odd")
+else:
+    print("Even")
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Modulus operator (%)
+✔ Bitwise AND operator (&)
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 21/100
+"""
