@@ -1,0 +1,103 @@
+# ============================================================
+# Program 19 : Sum of First N Natural Numbers
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the sum of the first
+n natural numbers.
+
+Examples:
+---------
+Input : 3
+Output: 6
+
+Explanation:
+1 + 2 + 3 = 6
+
+Input : 10
+Output: 55
+"""
+
+# ============================================================
+# Method 1 : Using For Loop (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+n = int(input("Enter a number: "))
+
+sum_of_numbers = 0
+
+for i in range(1, n + 1):
+    sum_of_numbers += i
+
+print("Sum =", sum_of_numbers)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using While Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+n = int(input("Enter a number: "))
+
+sum_of_numbers = 0
+i = 1
+
+while i <= n:
+    sum_of_numbers += i
+    i += 1
+
+print("Sum =", sum_of_numbers)
+"""
+
+
+"""
+Method 3 : Using Formula (Best)
+
+Time Complexity : O(1)
+Space Complexity: O(1)
+
+n = int(input("Enter a number: "))
+
+sum_of_numbers = n * (n + 1) // 2
+
+print("Sum =", sum_of_numbers)
+"""
+
+
+"""
+Method 4 : Using sum()
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+n = int(input("Enter a number: "))
+
+sum_of_numbers = sum(range(1, n + 1))
+
+print("Sum =", sum_of_numbers)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Natural numbers
+✔ for loop
+✔ while loop
+✔ sum() function
+✔ Mathematical formula
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 19/100
+"""
