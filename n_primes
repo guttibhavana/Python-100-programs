@@ -1,0 +1,112 @@
+# ============================================================
+# Program 20 : Print All Prime Numbers in a Given Range
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to print all prime numbers
+from 1 to n.
+
+A prime number is a natural number greater than 1
+that has exactly two factors: 1 and itself.
+
+Examples:
+---------
+Input : 20
+
+Output:
+2 3 5 7 11 13 17 19
+"""
+
+# ============================================================
+# Method 1 : Using Square Root Optimization (Used)
+# Time Complexity : O(n√n)
+# Space Complexity: O(1)
+# ============================================================
+
+def print_primes(n):
+
+    for num in range(2, n + 1):
+
+        is_prime = True
+
+        for i in range(2, int(num ** 0.5) + 1):
+
+            if num % i == 0:
+                is_prime = False
+                break
+
+        if is_prime:
+            print(num, end=" ")
+
+
+n = int(input("Enter the range: "))
+
+print_primes(n)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Brute Force
+
+Time Complexity : O(n²)
+Space Complexity: O(1)
+
+n = int(input("Enter the range: "))
+
+for num in range(2, n + 1):
+
+    count = 0
+
+    for i in range(1, num + 1):
+        if num % i == 0:
+            count += 1
+
+    if count == 2:
+        print(num, end=" ")
+"""
+
+
+"""
+Method 3 : Using a Separate is_prime() Function
+
+Time Complexity : O(n√n)
+Space Complexity: O(1)
+
+def is_prime(num):
+
+    if num < 2:
+        return False
+
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+
+    return True
+
+
+n = int(input("Enter the range: "))
+
+for i in range(2, n + 1):
+    if is_prime(i):
+        print(i, end=" ")
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Prime numbers
+✔ Nested loops
+✔ Square root optimization
+✔ Functions
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 20/100
+"""
