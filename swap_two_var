@@ -1,0 +1,111 @@
+# ============================================================
+# Program 22 : Swap Two Numbers Without Using a Third Variable
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to swap two numbers without
+using a third variable.
+
+Examples:
+---------
+Input :
+a = 6
+b = 8
+
+Output:
+a = 8
+b = 6
+"""
+
+# ============================================================
+# Method 1 : Using Multiple Assignment (Used)
+# Time Complexity : O(1)
+# Space Complexity: O(1)
+# ============================================================
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+a, b = b, a
+
+print("After Swapping:")
+print("a =", a)
+print("b =", b)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Addition and Subtraction
+
+Time Complexity : O(1)
+Space Complexity: O(1)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+a = a + b
+b = a - b
+a = a - b
+
+print("a =", a)
+print("b =", b)
+"""
+
+
+"""
+Method 3 : Using Multiplication and Division
+
+Time Complexity : O(1)
+Space Complexity: O(1)
+
+(Note: This method does not work if either number is 0.)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+a = a * b
+b = a // b
+a = a // b
+
+print("a =", a)
+print("b =", b)
+"""
+
+
+"""
+Method 4 : Using Bitwise XOR
+
+Time Complexity : O(1)
+Space Complexity: O(1)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+a = a ^ b
+b = a ^ b
+a = a ^ b
+
+print("a =", a)
+print("b =", b)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Multiple assignment
+✔ Tuple unpacking
+✔ Arithmetic operators
+✔ Bitwise XOR operator
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 22/100
+"""
