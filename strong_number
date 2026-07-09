@@ -1,0 +1,149 @@
+# ============================================================
+# Program 25 : Check Whether a Number is a Strong Number
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given
+number is a Strong Number.
+
+A Strong Number is a number whose sum of the
+factorials of its digits is equal to the number itself.
+
+Examples:
+---------
+Input : 145
+
+Output:
+Strong Number
+
+Explanation:
+1! + 4! + 5!
+= 1 + 24 + 120
+= 145
+
+Input : 123
+
+Output:
+Not a Strong Number
+"""
+
+# ============================================================
+# Method 1 : Using Nested Loops (Used)
+# Time Complexity : O(d × k)
+# Space Complexity: O(1)
+#
+# d = Number of digits
+# k = Maximum digit (0–9)
+# ============================================================
+
+number = input("Enter a number: ")
+
+factorial_sum = 0
+
+for digit in number:
+
+    factorial = 1
+
+    for i in range(1, int(digit) + 1):
+        factorial *= i
+
+    factorial_sum += factorial
+
+if factorial_sum == int(number):
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using While Loop
+
+Time Complexity : O(d × k)
+Space Complexity: O(1)
+
+number = int(input("Enter a number: "))
+
+temp = number
+factorial_sum = 0
+
+while temp > 0:
+
+    digit = temp % 10
+
+    factorial = 1
+
+    for i in range(1, digit + 1):
+        factorial *= i
+
+    factorial_sum += factorial
+    temp //= 10
+
+if factorial_sum == number:
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
+"""
+
+
+"""
+Method 3 : Using math.factorial()
+
+Time Complexity : O(d)
+Space Complexity: O(1)
+
+import math
+
+number = input("Enter a number: ")
+
+factorial_sum = 0
+
+for digit in number:
+    factorial_sum += math.factorial(int(digit))
+
+if factorial_sum == int(number):
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
+"""
+
+
+"""
+Method 4 : Using List Comprehension
+
+Time Complexity : O(d)
+Space Complexity: O(d)
+
+import math
+
+number = input("Enter a number: ")
+
+factorial_sum = sum([math.factorial(int(i)) for i in number])
+
+if factorial_sum == int(number):
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Strong Number concept
+✔ Nested loops
+✔ Factorial calculation
+✔ String traversal
+✔ while loop
+✔ math.factorial()
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 25/100
+"""
