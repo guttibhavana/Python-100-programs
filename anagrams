@@ -1,0 +1,113 @@
+# ============================================================
+# Program 28 : Check Whether Two Strings are Anagrams
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether two strings
+are anagrams.
+
+Two strings are anagrams if they contain the same
+characters with the same frequency, irrespective
+of their order.
+
+Examples:
+---------
+Input :
+listen
+silent
+
+Output:
+Anagram
+
+Input :
+race
+car
+
+Output:
+Not an Anagram
+"""
+
+# ============================================================
+# Method 1 : Using Dictionaries (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string1 = input("Enter first string: ")
+string2 = input("Enter second string: ")
+
+if len(string1) != len(string2):
+    print("Not an Anagram")
+
+else:
+
+    dict1 = {}
+    dict2 = {}
+
+    for ch in string1:
+        dict1[ch] = dict1.get(ch, 0) + 1
+
+    for ch in string2:
+        dict2[ch] = dict2.get(ch, 0) + 1
+
+    if dict1 == dict2:
+        print("Anagram")
+    else:
+        print("Not an Anagram")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Sorting
+
+Time Complexity : O(n log n)
+Space Complexity: O(n)
+
+string1 = input("Enter first string: ")
+string2 = input("Enter second string: ")
+
+if sorted(string1) == sorted(string2):
+    print("Anagram")
+else:
+    print("Not an Anagram")
+"""
+
+
+"""
+Method 3 : Using collections.Counter
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+from collections import Counter
+
+string1 = input("Enter first string: ")
+string2 = input("Enter second string: ")
+
+if Counter(string1) == Counter(string2):
+    print("Anagram")
+else:
+    print("Not an Anagram")
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionaries
+✔ Dictionary get() method
+✔ Frequency counting
+✔ String comparison
+✔ sorted() function
+✔ collections.Counter
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 28/100
+"""
