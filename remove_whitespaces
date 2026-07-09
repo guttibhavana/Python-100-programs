@@ -1,0 +1,120 @@
+# ============================================================
+# Program 29 : Remove Whitespaces from a String
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to remove whitespaces from
+a given string.
+
+Examples:
+---------
+Input :
+"    bhavana"
+
+Output:
+"bhavana"
+
+Input :
+"Py th on"
+
+Output:
+"Python"
+"""
+
+# ============================================================
+# Method 1 : Using a For Loop (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string = input("Enter a string: ")
+
+new_string = ""
+
+for ch in string:
+    if ch != " ":
+        new_string += ch
+
+print("String after removing whitespaces:", new_string)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using replace()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+new_string = string.replace(" ", "")
+
+print("String after removing whitespaces:", new_string)
+"""
+
+
+"""
+Method 3 : Using strip()
+
+Removes only leading and trailing spaces.
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+new_string = string.strip()
+
+print("String after removing whitespaces:", new_string)
+"""
+
+
+"""
+Method 4 : Using split() and join()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+new_string = "".join(string.split())
+
+print("String after removing whitespaces:", new_string)
+"""
+
+
+"""
+Method 5 : Using List Comprehension
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+new_string = "".join([ch for ch in string if ch != " "])
+
+print("String after removing whitespaces:", new_string)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ String traversal
+✔ String concatenation
+✔ replace() method
+✔ strip() method
+✔ split() and join()
+✔ List comprehension
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 29/100
+"""
