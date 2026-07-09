@@ -1,0 +1,106 @@
+# ============================================================
+# Program 32 : Convert a String to Title Case
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to convert the first letter
+of each word in a string to uppercase.
+
+Examples:
+---------
+Input :
+bhavana gutti
+
+Output:
+Bhavana Gutti
+
+Input :
+python programming language
+
+Output:
+Python Programming Language
+"""
+
+# ============================================================
+# Method 1 : Using title() (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string = input("Enter a string: ")
+
+print("Title Case:", string.title())
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using capitalize() with split()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+words = string.split()
+
+result = []
+
+for word in words:
+    result.append(word.capitalize())
+
+print(" ".join(result))
+"""
+
+
+"""
+Method 3 : Using List Comprehension
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+result = " ".join([word.capitalize()
+                   for word in string.split()])
+
+print(result)
+"""
+
+""
+
+
+"""
+Method 4 : Using string.capwords()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+import string
+
+text = input("Enter a string: ")
+
+print(string.capwords(text))
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ title() method
+✔ capitalize() method
+✔ split() and join()
+✔ List comprehension
+✔ String slicing
+✔ upper() and lower()
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 32/100
+"""
