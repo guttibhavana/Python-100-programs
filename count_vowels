@@ -1,0 +1,135 @@
+# ============================================================
+# Program 26 : Count the Number of Vowels in a String
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to count the number of vowels
+in a given string.
+
+Vowels are:
+a, e, i, o, u
+
+Examples:
+---------
+Input : bhavana
+
+Output:
+3
+
+Explanation:
+The vowels are: a, a, a
+"""
+
+# ============================================================
+# Method 1 : Using a List of Vowels (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+string = input("Enter a string: ")
+
+count = 0
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+for ch in string:
+    if ch in vowels:
+        count += 1
+
+print("Number of Vowels =", count)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a Set
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+count = 0
+vowels = {'a', 'e', 'i', 'o', 'u'}
+
+for ch in string:
+    if ch in vowels:
+        count += 1
+
+print("Number of Vowels =", count)
+"""
+
+
+"""
+Method 3 : Using String Membership
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+count = 0
+
+for ch in string:
+    if ch in "aeiou":
+        count += 1
+
+print("Number of Vowels =", count)
+"""
+
+
+"""
+Method 4 : Using sum()
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+count = sum(ch in "aeiou" for ch in string)
+
+print("Number of Vowels =", count)
+"""
+
+
+"""
+Method 5 : Using a Function
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+def count_vowels(string):
+
+    count = 0
+
+    for ch in string:
+        if ch in "aeiou":
+            count += 1
+
+    return count
+
+string = input("Enter a string: ")
+
+print("Number of Vowels =", count_vowels(string))
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ String traversal
+✔ Membership operator (in)
+✔ Lists
+✔ Sets
+✔ sum() function
+✔ Functions
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 26/100
+"""
