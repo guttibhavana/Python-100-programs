@@ -1,0 +1,128 @@
+# ============================================================
+# Program 31 : Find the First Non-Repeating Character in a String
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the first
+non-repeating character in a given string.
+
+Examples:
+---------
+Input :
+bbhhhavvvs
+
+Output:
+a
+
+Input :
+aabbcc
+
+Output:
+No non-repeating character found.
+"""
+
+# ============================================================
+# Method 1 : Using Dictionary (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string = input("Enter a string: ")
+
+frequency = {}
+
+for ch in string:
+    if ch in frequency:
+        frequency[ch] += 1
+    else:
+        frequency[ch] = 1
+
+for ch in string:
+    if frequency[ch] == 1:
+        print("First Non-Repeating Character =", ch)
+        break
+else:
+    print("No non-repeating character found.")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Dictionary get()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+
+frequency = {}
+
+for ch in string:
+    frequency[ch] = frequency.get(ch, 0) + 1
+
+for ch in string:
+    if frequency[ch] == 1:
+        print("First Non-Repeating Character =", ch)
+        break
+else:
+    print("No non-repeating character found.")
+"""
+
+
+"""
+Method 3 : Using collections.Counter
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+from collections import Counter
+
+string = input("Enter a string: ")
+
+frequency = Counter(string)
+
+for ch in string:
+    if frequency[ch] == 1:
+        print("First Non-Repeating Character =", ch)
+        break
+else:
+    print("No non-repeating character found.")
+"""
+
+
+"""
+Method 4 : Using count()
+
+Time Complexity : O(n²)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+for ch in string:
+    if string.count(ch) == 1:
+        print("First Non-Repeating Character =", ch)
+        break
+else:
+    print("No non-repeating character found.")
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary
+✔ Dictionary get() method
+✔ collections.Counter
+✔ String count() method
+✔ for-else loop
+✔ Frequency counting
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 31/100
+"""
