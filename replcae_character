@@ -1,0 +1,100 @@
+# ============================================================
+# Program 34 : Replace a Character in a String
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to replace all occurrences
+of a character in a string with another character.
+
+Examples:
+---------
+Input :
+String : banana
+Old Character : a
+New Character : o
+
+Output:
+bonono
+
+Input :
+String : hello
+Old Character : l
+New Character : x
+
+Output:
+hexxo
+"""
+
+# ============================================================
+# Method 1 : Using replace() (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+string = input("Enter a string: ")
+old_char = input("Enter the character to replace: ")
+new_char = input("Enter the new character: ")
+
+result = string.replace(old_char, new_char)
+
+print("Updated String:", result)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+old_char = input("Enter the character to replace: ")
+new_char = input("Enter the new character: ")
+
+result = ""
+
+for ch in string:
+    if ch == old_char:
+        result += new_char
+    else:
+        result += ch
+
+print(result)
+"""
+
+
+"""
+Method 3 : Using List Comprehension
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+string = input("Enter a string: ")
+old_char = input("Enter the character to replace: ")
+new_char = input("Enter the new character: ")
+
+result = "".join([new_char if ch == old_char else ch
+                  for ch in string])
+
+print(result)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ replace() method
+✔ String traversal
+✔ for loop
+✔ List comprehension
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 34/100
+"""
