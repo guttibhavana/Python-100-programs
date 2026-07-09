@@ -1,0 +1,130 @@
+# ============================================================
+# Program 35 : Find the Longest Word in a Sentence
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the longest word
+in a given sentence.
+
+Examples:
+---------
+Input :
+bhavana gutti saiiii
+
+Output:
+bhavana
+
+Input :
+I love Python programming
+
+Output:
+programming
+"""
+
+# ============================================================
+# Method 1 : Using split() and a For Loop (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+
+longest_word = ""
+
+for word in words:
+    if len(word) > len(longest_word):
+        longest_word = word
+
+print("Longest Word:", longest_word)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using max()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+
+print("Longest Word:", max(words, key=len))
+"""
+
+
+"""
+Method 3 : Using sorted()
+
+Time Complexity : O(n log n)
+Space Complexity: O(n)
+
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+
+words.sort(key=len)
+
+print("Longest Word:", words[-1])
+"""
+
+
+"""
+Method 4 : Using a Function
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+def longest_word(sentence):
+
+    words = sentence.split()
+
+    longest = ""
+
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+
+    return longest
+
+sentence = input("Enter a sentence: ")
+
+print("Longest Word:", longest_word(sentence))
+"""
+
+
+"""
+Method 5 : Using List Comprehension with max()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+sentence = input("Enter a sentence: ")
+
+print(max([word for word in sentence.split()], key=len))
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ split() method
+✔ for loop
+✔ len() function
+✔ max() function
+✔ sorted() function
+✔ Functions
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 35/100
+"""
