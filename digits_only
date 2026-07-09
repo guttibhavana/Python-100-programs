@@ -1,0 +1,77 @@
+# ============================================================
+# Program 33 : Check if a String Contains Only Digits
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to check whether a given
+string contains only digits.
+
+Examples:
+---------
+Input :
+12345
+
+Output:
+Contains only digits
+
+Input :
+123a45
+
+Output:
+Does not contain only digits
+"""
+
+# ============================================================
+# Method 1 : Using isdigit() (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+string = input("Enter a string: ")
+
+if string.isdigit():
+    print("Contains only digits")
+else:
+    print("Does not contain only digits")
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+string = input("Enter a string: ")
+
+flag = True
+
+for ch in string:
+    if not ch.isdigit():
+        flag = False
+        break
+
+if flag:
+    print("Contains only digits")
+else:
+    print("Does not contain only digits")
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ isdigit() method
+✔ for loop
+✔ Exception handling
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 33/100
+"""
