@@ -1,0 +1,127 @@
+# ============================================================
+# Program 42 : Find Duplicate Elements in a List
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find all duplicate
+elements in a given list.
+
+Examples:
+---------
+Input :
+[1, 1, 2, 2, 2, 2, 3]
+
+Output:
+[1, 2]
+
+Input :
+[10, 20, 30, 40]
+
+Output:
+[]
+"""
+
+# ============================================================
+# Method 1 : Using Two Sets (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+numbers = [1, 1, 2, 2, 2, 2, 3]
+
+seen = set()
+duplicates = set()
+
+for num in numbers:
+    if num in seen:
+        duplicates.add(num)
+    else:
+        seen.add(num)
+
+print("Duplicate Elements:", list(duplicates))
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Dictionary
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+numbers = [1, 1, 2, 2, 2, 2, 3]
+
+frequency = {}
+
+for num in numbers:
+    frequency[num] = frequency.get(num, 0) + 1
+
+duplicates = []
+
+for key, value in frequency.items():
+    if value > 1:
+        duplicates.append(key)
+
+print(duplicates)
+"""
+
+
+"""
+Method 3 : Using count()
+
+Time Complexity : O(n²)
+Space Complexity: O(n)
+
+numbers = [1, 1, 2, 2, 2, 2, 3]
+
+duplicates = []
+
+for num in numbers:
+    if numbers.count(num) > 1 and num not in duplicates:
+        duplicates.append(num)
+
+print(duplicates)
+"""
+
+
+"""
+Method 4 : Using Sorting
+
+Time Complexity : O(n log n)
+Space Complexity: O(1)
+
+numbers = [1, 1, 2, 2, 2, 2, 3]
+
+numbers.sort()
+
+duplicates = []
+
+for i in range(len(numbers) - 1):
+    if numbers[i] == numbers[i + 1]:
+        if numbers[i] not in duplicates:
+            duplicates.append(numbers[i])
+
+print(duplicates)
+"""
+
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Sets
+✔ Dictionary
+✔ Dictionary get() method
+✔ count() method
+✔ Sorting
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 42/100
+"""
