@@ -1,0 +1,96 @@
+# ============================================================
+# Program 40 : Left Rotate a List by N Positions
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to left rotate a list
+by N positions.
+
+Examples:
+---------
+Input :
+List = [10, 20, 30, 40, 50]
+N = 2
+
+Output:
+[30, 40, 50, 10, 20]
+
+Input :
+List = [1, 2, 3, 4, 5]
+N = 1
+
+Output:
+[2, 3, 4, 5, 1]
+"""
+
+# ============================================================
+# Method 1 : Using List Slicing (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+items = [10, 20, 30, 40, 50]
+n = 2
+
+# Handle cases where n is greater than list length
+n = n % len(items)
+
+rotated = items[n:] + items[:n]
+
+print("Left Rotated List:", rotated)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n × k)
+Space Complexity: O(1)
+
+items = [10, 20, 30, 40, 50]
+n = 2
+
+n = n % len(items)
+
+for i in range(n):
+    first = items.pop(0)
+    items.append(first)
+
+print(items)
+"""
+
+"""
+Method 5 : Using a Function
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+def left_rotate(items, n):
+
+    n = n % len(items)
+
+    return items[n:] + items[:n]
+
+items = [10, 20, 30, 40, 50]
+
+print(left_rotate(items, 2))
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ List slicing
+✔ List concatenation
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 40/100
+"""
