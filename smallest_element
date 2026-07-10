@@ -1,0 +1,87 @@
+# ============================================================
+# Program 36 : Find the Smallest Element in a List
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the smallest element
+in a given list.
+
+Examples:
+---------
+Input :
+[16, 2, 3, 243, 2]
+
+Output:
+2
+
+Input :
+[10, 25, 5, 18]
+
+Output:
+5
+"""
+
+# ============================================================
+# Method 1 : Using min() (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+numbers = [16, 2, 3, 243, 2]
+
+smallest = min(numbers)
+
+print("Smallest Element:", smallest)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+numbers = [16, 2, 3, 243, 2]
+
+smallest = numbers[0]
+
+for num in numbers:
+    if num < smallest:
+        smallest = num
+
+print("Smallest Element:", smallest)
+"""
+
+
+"""
+Method 3 : Using Sorting
+
+Time Complexity : O(n log n)
+Space Complexity: O(1)
+
+numbers = [16, 2, 3, 243, 2]
+
+numbers.sort()
+
+print("Smallest Element:", numbers[0])
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ min() function
+✔ List traversal
+✔ Comparison operators
+✔ sort() method
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 36/100
+"""
