@@ -1,0 +1,112 @@
+# ============================================================
+# Program 38 : Find the Average of List Elements
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the average
+of all elements in a given list.
+
+Examples:
+---------
+Input :
+[1, 2, 3, 4, 5]
+
+Output:
+3.0
+
+Input :
+[10, 20, 30]
+
+Output:
+20.0
+"""
+
+# ============================================================
+# Method 1 : Using a For Loop (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+numbers = [1, 2, 3, 4, 5]
+
+total = 0
+
+for num in numbers:
+    total += num
+
+average = total / len(numbers)
+
+print("Average =", average)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using sum()
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+numbers = [1, 2, 3, 4, 5]
+
+average = sum(numbers) / len(numbers)
+
+print("Average =", average)
+"""
+
+
+"""
+Method 3 : Using statistics.mean()
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+from statistics import mean
+
+numbers = [1, 2, 3, 4, 5]
+
+print("Average =", mean(numbers))
+"""
+
+
+"""
+Method 4 : Using a While Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+numbers = [1, 2, 3, 4, 5]
+
+total = 0
+i = 0
+
+while i < len(numbers):
+    total += numbers[i]
+    i += 1
+
+average = total / len(numbers)
+
+print("Average =", average)
+"""
+
+
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ sum() function
+✔ statistics.mean() function
+✔ for loop
+✔ while loop
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 38/100
+"""
