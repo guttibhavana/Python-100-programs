@@ -1,0 +1,95 @@
+# ============================================================
+# Program 41 : Find the Missing Number in a Sequence
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the missing number
+in a sequence of consecutive numbers from 1 to n.
+
+Examples:
+---------
+Input :
+[1, 2, 4, 5, 6, 7, 8, 9, 10]
+
+Output:
+3
+
+Input :
+[2, 3, 4, 5]
+
+Output:
+This method is not applicable because
+the sequence does not start from 1.
+"""
+
+# ============================================================
+# Method 1 : Using Sum Formula (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+numbers = [1, 2, 4, 5, 6, 7, 8, 9, 10]
+
+n = len(numbers) + 1
+
+expected_sum = n * (n + 1) // 2
+
+missing_number = expected_sum - sum(numbers)
+
+print("Missing Number:", missing_number)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+numbers = [1, 2, 4, 5, 6, 7, 8, 9, 10]
+
+expected = 1
+
+for num in numbers:
+    if num != expected:
+        print("Missing Number:", expected)
+        break
+    expected += 1
+"""
+
+
+"""
+Method 3 : Using Sorting
+
+Time Complexity : O(n log n)
+Space Complexity: O(1)
+
+numbers = [1, 2, 4, 5, 6, 7, 8, 9, 10]
+
+numbers.sort()
+
+for i in range(len(numbers)):
+    if numbers[i] != i + 1:
+        print("Missing Number:", i + 1)
+        break
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Sum formula
+✔ List traversal
+✔ Sorting
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 41/100
+"""
