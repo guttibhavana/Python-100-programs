@@ -1,0 +1,146 @@
+# ============================================================
+# Program 43 : Split a List into Two Parts
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to split a list into
+two parts.
+
+If the list has an odd number of elements,
+the second part will contain one extra element.
+
+Examples:
+---------
+Input :
+[1, 2, 3, 4, 5, 6]
+
+Output:
+[1, 2, 3]
+[4, 5, 6]
+
+Input :
+[1, 2, 3, 4, 5, 6, 7]
+
+Output:
+[1, 2, 3]
+[4, 5, 6, 7]
+"""
+
+# ============================================================
+# Method 1 : Using List Slicing (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+mid = len(numbers) // 2
+
+first_part = numbers[:mid]
+second_part = numbers[mid:]
+
+print("First Part :", first_part)
+print("Second Part:", second_part)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+mid = len(numbers) // 2
+
+first_part = []
+second_part = []
+
+for i in range(len(numbers)):
+    if i < mid:
+        first_part.append(numbers[i])
+    else:
+        second_part.append(numbers[i])
+
+print(first_part)
+print(second_part)
+"""
+
+
+"""
+Method 3 : Using List Comprehension
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+mid = len(numbers) // 2
+
+first_part = [numbers[i] for i in range(mid)]
+second_part = [numbers[i] for i in range(mid, len(numbers))]
+
+print(first_part)
+print(second_part)
+"""
+
+
+"""
+Method 4 : Using a Function
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+def split_list(numbers):
+
+    mid = len(numbers) // 2
+
+    return numbers[:mid], numbers[mid:]
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+part1, part2 = split_list(numbers)
+
+print(part1)
+print(part2)
+"""
+
+
+"""
+Method 5 : Split into Equal-Sized Chunks
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+chunk_size = len(numbers) // 2
+
+chunks = [numbers[i:i + chunk_size]
+          for i in range(0, len(numbers), chunk_size)]
+
+print(chunks)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ List slicing
+✔ List indexing
+✔ List comprehension
+✔ Functions
+✔ append() method
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 43/100
+"""
