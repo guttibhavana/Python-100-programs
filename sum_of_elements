@@ -1,0 +1,90 @@
+# ============================================================
+# Program 37 : Find the Sum of All Elements in a List
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the sum of all
+elements in a given list.
+
+Examples:
+---------
+Input :
+[1, 2, 3, 4, 5]
+
+Output:
+15
+
+Input :
+[10, 20, 30]
+
+Output:
+60
+"""
+
+# ============================================================
+# Method 1 : Using sum() (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(1)
+# ============================================================
+
+numbers = [1, 2, 3, 4, 5]
+
+total = sum(numbers)
+
+print("Sum of Elements:", total)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+numbers = [1, 2, 3, 4, 5]
+
+total = 0
+
+for num in numbers:
+    total += num
+
+print("Sum of Elements:", total)
+"""
+
+
+"""
+Method 3 : Using a While Loop
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+numbers = [1, 2, 3, 4, 5]
+
+total = 0
+i = 0
+
+while i < len(numbers):
+    total += numbers[i]
+    i += 1
+
+print("Sum of Elements:", total)
+"""
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ sum() function
+✔ for loop
+✔ while loop
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 37/100
+"""
