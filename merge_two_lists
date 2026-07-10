@@ -1,0 +1,89 @@
+# ============================================================
+# Program 39 : Merge Two Lists
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to merge two lists into
+a single list.
+
+Examples:
+---------
+Input :
+List 1 = [1, 2, 2]
+List 2 = [3, 4, 5]
+
+Output:
+[1, 2, 2, 3, 4, 5]
+
+Input :
+List 1 = ['a', 'b']
+List 2 = ['c', 'd']
+
+Output:
+['a', 'b', 'c', 'd']
+"""
+
+# ============================================================
+# Method 1 : Using + Operator (Used)
+# Time Complexity : O(n + m)
+# Space Complexity: O(n + m)
+# ============================================================
+
+list1 = [1, 2, 2]
+list2 = [3, 4, 5]
+
+merged_list = list1 + list2
+
+print("Merged List:", merged_list)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using extend()
+
+Time Complexity : O(m)
+Space Complexity: O(1)
+
+list1 = [1, 2, 2]
+list2 = [3, 4, 5]
+
+list1.extend(list2)
+
+print(list1)
+"""
+
+
+"""
+Method 3 : Using a For Loop
+
+Time Complexity : O(n + m)
+Space Complexity: O(1)
+
+list1 = [1, 2, 2]
+list2 = [3, 4, 5]
+
+for num in list2:
+    list1.append(num)
+
+print(list1)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ List concatenation (+)
+✔ extend() method
+✔ append() method
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 39/100
+"""
