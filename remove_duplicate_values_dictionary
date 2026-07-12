@@ -1,0 +1,151 @@
+# ============================================================
+# Program 50 : Remove Duplicate Values from a Dictionary
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to remove duplicate
+values from a dictionary while keeping
+the first occurrence.
+
+Examples:
+---------
+Input :
+{'a': 1, 'b': 1, 'c': 3, 'd': 4}
+
+Output:
+{'a': 1, 'c': 3, 'd': 4}
+
+Input :
+{'x': 10, 'y': 20, 'z': 10}
+
+Output:
+{'x': 10, 'y': 20}
+"""
+
+# ============================================================
+# Method 1 : Using a Set (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+data = {"a": 1, "b": 1, "c": 3, "d": 4}
+
+seen = set()
+unique_dict = {}
+
+for key, value in data.items():
+    if value not in seen:
+        seen.add(value)
+        unique_dict[key] = value
+
+print("Dictionary After Removing Duplicate Values:")
+print(unique_dict)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Dictionary Comprehension
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+data = {"a": 1, "b": 1, "c": 3, "d": 4}
+
+seen = set()
+
+unique_dict = {
+    key: value
+    for key, value in data.items()
+    if not (value in seen or seen.add(value))
+}
+
+print(unique_dict)
+"""
+
+
+"""
+Method 3 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+data = {"a": 1, "b": 1, "c": 3, "d": 4}
+
+unique_dict = {}
+
+for key, value in data.items():
+
+    if value not in unique_dict.values():
+        unique_dict[key] = value
+
+print(unique_dict)
+"""
+
+
+"""
+Method 4 : Using a Function
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+def remove_duplicates(data):
+
+    seen = set()
+    result = {}
+
+    for key, value in data.items():
+        if value not in seen:
+            seen.add(value)
+            result[key] = value
+
+    return result
+
+data = {"a": 1, "b": 1, "c": 3, "d": 4}
+
+print(remove_duplicates(data))
+"""
+
+
+"""
+Method 5 : Using dict.fromkeys()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+data = {"a": 1, "b": 1, "c": 3, "d": 4}
+
+unique_values = dict.fromkeys(data.values())
+
+result = {}
+
+for value in unique_values:
+    for key, val in data.items():
+        if val == value:
+            result[key] = value
+            break
+
+print(result)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary traversal
+✔ items() method
+✔ Sets
+✔ Dictionary comprehension
+✔ dict.fromkeys()
+✔ Functions
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 50/100
+"""
