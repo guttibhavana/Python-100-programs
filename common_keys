@@ -1,0 +1,132 @@
+# ============================================================
+# Program 48 : Find Common Keys in Two Dictionaries
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to find the common keys
+between two dictionaries.
+
+Examples:
+---------
+Input :
+dict1 = {"a":1, "d":2, "b":3, "c":4}
+dict2 = {"a":2, "e":4, "f":5, "d":6}
+
+Output:
+['a', 'd']
+
+Input :
+dict1 = {"x":10, "y":20}
+dict2 = {"a":1, "b":2}
+
+Output:
+[]
+"""
+
+# ============================================================
+# Method 1 : Using a For Loop (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+dict1 = {"a": 1, "d": 2, "b": 3, "c": 4}
+dict2 = {"a": 2, "e": 4, "f": 5, "d": 6}
+
+common_keys = []
+
+for key in dict1:
+    if key in dict2:
+        common_keys.append(key)
+
+print("Common Keys:", common_keys)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using Dictionary Keys Intersection
+
+Time Complexity : O(min(n, m))
+Space Complexity: O(min(n, m))
+
+dict1 = {"a": 1, "d": 2, "b": 3, "c": 4}
+dict2 = {"a": 2, "e": 4, "f": 5, "d": 6}
+
+common = dict1.keys() & dict2.keys()
+
+print(common)
+"""
+
+
+"""
+Method 3 : Using List Comprehension
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+dict1 = {"a": 1, "d": 2, "b": 3, "c": 4}
+dict2 = {"a": 2, "e": 4, "f": 5, "d": 6}
+
+common = [key for key in dict1 if key in dict2]
+
+print(common)
+"""
+
+
+"""
+Method 4 : Using Set Intersection
+
+Time Complexity : O(min(n, m))
+Space Complexity: O(min(n, m))
+
+dict1 = {"a": 1, "d": 2, "b": 3, "c": 4}
+dict2 = {"a": 2, "e": 4, "f": 5, "d": 6}
+
+common = set(dict1) & set(dict2)
+
+print(common)
+"""
+
+
+"""
+Method 5 : Using a Function
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+def common_keys(dict1, dict2):
+
+    result = []
+
+    for key in dict1:
+        if key in dict2:
+            result.append(key)
+
+    return result
+
+dict1 = {"a": 1, "d": 2, "b": 3, "c": 4}
+dict2 = {"a": 2, "e": 4, "f": 5, "d": 6}
+
+print(common_keys(dict1, dict2))
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary traversal
+✔ keys() method
+✔ Set intersection (&)
+✔ List comprehension
+✔ Functions
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 48/100
+"""
