@@ -1,0 +1,109 @@
+# ============================================================
+# Program 47 : Sort a Dictionary by Value
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to sort a dictionary
+based on its values in ascending order.
+
+Examples:
+---------
+Input :
+{'watermelon': 1, 'apple': 2, 'banana': 3}
+
+Output:
+{'watermelon': 1, 'apple': 2, 'banana': 3}
+
+Input :
+{'a': 5, 'b': 2, 'c': 8}
+
+Output:
+{'b': 2, 'a': 5, 'c': 8}
+"""
+
+# ============================================================
+# Method 1 : Using sorted() and Dictionary Comprehension (Used)
+# Time Complexity : O(n log n)
+# Space Complexity: O(n)
+# ============================================================
+
+data = {'watermelon': 1, 'apple': 2, 'banana': 3}
+
+sorted_dict = {
+    key: value
+    for key, value in sorted(data.items(),
+                             key=lambda item: item[1])
+}
+
+print("Sorted Dictionary:", sorted_dict)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using sorted() with dict()
+
+Time Complexity : O(n log n)
+Space Complexity: O(n)
+
+data = {'watermelon': 1, 'apple': 2, 'banana': 3}
+
+sorted_dict = dict(
+    sorted(data.items(), key=lambda item: item[1])
+)
+
+print(sorted_dict)
+"""
+
+
+"""
+Method 3 : Sort by Keys
+
+Time Complexity : O(n log n)
+Space Complexity: O(n)
+
+data = {'watermelon': 1, 'apple': 2, 'banana': 3}
+
+sorted_dict = dict(sorted(data.items()))
+
+print(sorted_dict)
+"""
+
+
+"""
+Method 4 : Sort in Descending Order
+
+Time Complexity : O(n log n)
+Space Complexity: O(n)
+
+data = {'watermelon': 1, 'apple': 2, 'banana': 3}
+
+sorted_dict = dict(
+    sorted(data.items(),
+           key=lambda item: item[1],
+           reverse=True)
+)
+
+print(sorted_dict)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary comprehension
+✔ sorted() function
+✔ items() method
+✔ lambda function
+✔ Dictionary ordering
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 47/100
+"""
