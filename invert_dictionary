@@ -1,0 +1,86 @@
+# ============================================================
+# Program 49 : Invert a Dictionary
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to invert a dictionary
+by swapping its keys and values.
+
+Examples:
+---------
+Input :
+{'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+Output:
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+
+Input :
+{'x': 10, 'y': 20}
+
+Output:
+{10: 'x', 20: 'y'}
+"""
+
+# ============================================================
+# Method 1 : Using Dictionary Comprehension (Used)
+# Time Complexity : O(n)
+# Space Complexity: O(n)
+# ============================================================
+
+data = {"a": 1, "b": 2, "c": 3, "d": 4}
+
+inverted_dict = {value: key for key, value in data.items()}
+
+print("Inverted Dictionary:", inverted_dict)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using a For Loop
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+data = {"a": 1, "b": 2, "c": 3, "d": 4}
+
+inverted = {}
+
+for key, value in data.items():
+    inverted[value] = key
+
+print(inverted)
+"""
+
+
+"""
+Method 3 : Using dict() and map()
+
+Time Complexity : O(n)
+Space Complexity: O(n)
+
+data = {"a": 1, "b": 2, "c": 3, "d": 4}
+
+inverted = dict(map(reversed, data.items()))
+
+print(inverted)
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary comprehension
+✔ items() method
+✔ reversed()
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 49/100
+"""
