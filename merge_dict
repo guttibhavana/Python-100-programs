@@ -1,0 +1,123 @@
+# ============================================================
+# Program 46 : Merge Two Dictionaries
+# 100 Python Programs Challenge
+# ============================================================
+
+"""
+Problem Statement:
+Write a Python program to merge two dictionaries
+into a single dictionary.
+
+Examples:
+---------
+Input :
+dict1 = {"name": "Alice", "age": 25}
+dict2 = {"role": "Admin"}
+
+Output:
+{'name': 'Alice', 'age': 25, 'role': 'Admin'}
+
+Input :
+dict1 = {"a": 1, "b": 2}
+dict2 = {"b": 5, "c": 3}
+
+Output:
+{'a': 1, 'b': 5, 'c': 3}
+"""
+
+# ============================================================
+# Method 1 : Using | Operator (Used)
+# Time Complexity : O(n + m)
+# Space Complexity: O(n + m)
+# ============================================================
+
+dict1 = {"name": "Alice", "age": 25, "role": "Admin"}
+dict2 = {"a": 1, "b": 2, "c": 3}
+
+merged_dict = dict1 | dict2
+
+print("Merged Dictionary:", merged_dict)
+
+
+# ============================================================
+# Other Ways to Solve
+# ============================================================
+
+"""
+Method 2 : Using update()
+
+Time Complexity : O(n + m)
+Space Complexity: O(1)
+
+dict1 = {"name": "Alice", "age": 25, "role": "Admin"}
+dict2 = {"a": 1, "b": 2, "c": 3}
+
+dict1.update(dict2)
+
+print(dict1)
+"""
+
+
+"""
+Method 3 : Using Dictionary Unpacking
+
+Time Complexity : O(n + m)
+Space Complexity: O(n + m)
+
+dict1 = {"name": "Alice", "age": 25, "role": "Admin"}
+dict2 = {"a": 1, "b": 2, "c": 3}
+
+merged_dict = {**dict1, **dict2}
+
+print(merged_dict)
+"""
+
+
+"""
+Method 4 : Using a For Loop
+
+Time Complexity : O(n + m)
+Space Complexity: O(1)
+
+dict1 = {"name": "Alice", "age": 25, "role": "Admin"}
+dict2 = {"a": 1, "b": 2, "c": 3}
+
+for key, value in dict2.items():
+    dict1[key] = value
+
+print(dict1)
+"""
+
+
+"""
+Method 5 : Using a Function
+
+Time Complexity : O(n + m)
+Space Complexity: O(n + m)
+
+def merge_dicts(dict1, dict2):
+    return dict1 | dict2
+
+dict1 = {"name": "Alice", "age": 25, "role": "Admin"}
+dict2 = {"a": 1, "b": 2, "c": 3}
+
+print(merge_dicts(dict1, dict2))
+"""
+
+
+# ============================================================
+# What I Learned
+# ============================================================
+
+"""
+✔ Dictionary merge (|)
+✔ update() method
+✔ Dictionary unpacking (**)
+✔ items() method
+✔ Dictionary traversal
+✔ Functions
+✔ Time and Space Complexity
+
+Challenge Progress:
+Completed: 46/100
+"""
